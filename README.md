@@ -147,13 +147,18 @@ Traits are additional characteristics or attributes associated with entities. Th
 
 ### Practical Use Case
 
-Imagine you're building a recipe search chatbot. When a user says, "Find me a recipe for spaghetti Bolognese," the system recognizes the intent as GetRecipe and extracts the entity {dish} as "spaghetti Bolognese." These extracted details help the chatbot understand the user's request and respond appropriately by providing information about the spaghetti Bolognese recipe.
+Picture this: you're crafting a recipe search chatbot, and a user eagerly states, "Find me a recipe for spaghetti Bolognese." In this scenario, the system is like a culinary detective. It recognizes the user's intent, labeling it as 'GetRecipe,' and swiftly extracts the essential piece of information—the dish entity {dish}, revealing the quest for "spaghetti Bolognese." These details become the chatbot's key to unlocking the treasure trove of knowledge about the sought-after spaghetti Bolognese recipe. The chatbot, armed with this understanding, responds promptly and accurately, delivering the mouthwatering details the user craves.
 
-By defining intents, entities, and traits, you create a structured way for your system to understand and respond to a wide range of user inputs, making your chatbot or natural language processing application more effective and user-friendly.
+Now, let's dive into the behind-the-scenes magic of training the natural language model in the Wit.ai application. To teach the application this culinary language, you craft examples called 'utterances.' In the example below, you set an example to train the model to recognize the 'GetRecipe' intent and extract the 'dish' entity. Simply enter the user's request, select the intent, entity, and trait, and with a click on the 'Train and Validate' button, you seamlessly incorporate this example into the application model. It's like adding a new clue to the chatbot's detective toolkit.
+
+![Training Wit](https://github.com/naturuplift/voice-recipe-search-system/assets/23546356/10b998e2-2ee8-425b-bf42-dc496c706af8)
+
+By meticulously defining intents, entities, and traits, you construct a well-organized framework for your system. This structured approach empowers your chatbot or natural language processing application to comprehend and respond to a diverse array of user inputs. The result? An effective and user-friendly culinary companion, ready to assist and delight users on their recipe-seeking journeys.
 
 ### Training a Model on the wit.ai Platform
 
-To create utterances and intents for a recipe search system using Wit.ai, you'll want to define various ways users might express their requests. Here's an example set of intents and corresponding utterances for a recipe search system:
+To create utterances and intents for a recipe search system using Wit.ai, you'll want to define various ways users might express their requests.
+Here's an example set of intents and corresponding utterances for a recipe search system:
 
 #### **GetRecipe**
 |**Intent:**| **GetRecipe**|
@@ -216,7 +221,7 @@ We matched intents extracted by Wit and used API that match in [Spoonacular API]
 
 ## State Flow Diagram
 
-For a visual representation of the sequence of actions involved in the Voice Language Translation System, refer to the [State Flow Diagram][state-flow] provided in the project documentation.
+For a visual representation of the sequence of actions involved in the [Voice Language Translation System][voice-system], refer to the [State Flow Diagram][state-flow] provided in the project documentation.
 
 ## Contributing
 
@@ -234,6 +239,7 @@ This project is licensed under the MIT License. See the [LICENSE][MIT] file for 
 [project-app]: <https://naturuplift.github.io/voice-recipe-search-system/>
 [project-code]: <https://github.com/naturuplift/bootcamp-project-one/blob/main/index.html>
 [state-flow]: <https://github.com/naturuplift/bootcamp-project-one/blob/main/assets/img/Voice%20Language%20Translation%20State%20Diagram%20v2.png>
+[voice-system]: <https://github.com/naturuplift/voice-recipe-search-system/blob/main/assets/img/State%20Diagram%20Recipe%20Search%20v1.png>
 [wit-api]: <https://wit.ai/>
 [spoon-api]: <https://spoonacular.com/food-api/docs>
 [recipe-api]: <https://spoonacular.com/food-api/docs>
