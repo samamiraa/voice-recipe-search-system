@@ -24,6 +24,8 @@ The Voice to Recipe Search System is a voice-enabled application aimed to empowe
 Powered by JavaScript, jQuery, Web APIs, DOM manipulation, and Wit.ai for natural language understanding.
 Users can easily engage with the system by articulating their preferences into their device's microphone, specifying ingredients or dish preferences, and promptly receiving personalized recipe suggestions. Collaborated with Samantha Allen, Maika Saba & Arnaldo Sepulveda Espinosa.
 
+Collaborators of the project: **Samantha Allen**, **Maika Gabriela Saba** and **Arnaldo Sepulveda Espinosa**
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -58,31 +60,28 @@ git clone https://github.com/naturuplift/voice-recipe-search-system.git
 
 ```
 
-1.    Open the HTML File:
-        Navigate to the project directory.
-        Open the index.html file in a web browser.
+1. Open the HTML File:
+Navigate to the project directory.
+Open the index.html file in a web browser.
 
-
-2.    Start Voice Search:
-        Click the "Start Voice Search" button.
-        Speak a command like "Find recipes for chicken curry."
+2. Start Voice Search:
+Click the "Start Voice Search" button.
+Speak a command like "Find recipes for chicken curry."
   
 ![Screenshot 23](https://github.com/naturuplift/voice-recipe-search-system/assets/23546356/f67e767d-c732-4c42-ad5f-414dac6ac2d6)
 
 
-4.    View Results:
-        The system will display recognized voice commands and initiate a recipe search.
-        Recipe suggestions will be presented to the user.
+3. View Results:
+The system will display recognized voice commands and initiate a recipe search.
+Recipe suggestions will be presented to the user.
   
 ![Screenshot 22](https://github.com/naturuplift/voice-recipe-search-system/assets/23546356/f4ac2269-0c72-409f-b161-eb832f8e37d1)
 
 
-5.       View Selected Recipe:
-           The system will display the selected recipe with corresponding summary, servings, ingredients and instructions.
+4. View Selected Recipe:
+The system will display the selected recipe with corresponding summary, servings, ingredients and instructions.
      
 ![Screenshot 3](https://github.com/naturuplift/voice-recipe-search-system/assets/23546356/6c378ad7-0de4-43b7-92bc-08b33d57539d)
-
-
 
 ## Technologies Used
 
@@ -182,33 +181,6 @@ To create utterances and intents for a recipe search system using Wit.ai, you'll
 || ***Entity: {ingredient}***
 || This intent is used when the user wants recipes based on a specific ingredient they have or want to use. The entity ***{ingredient}*** captures the name of the ingredient.
 
-#### **GetRecipeDetails**
-
-|**Intent:**| **GetRecipeDetails**|
-| ------ | ------ |
-|***Utterances:***
-|| "Tell me more about the recipe for {dish}"
-|| "Details of {dish} recipe"
-|| "What do I need for {dish}?"
-|| "List ingredients for {dish}"
-| ***Explanation:***||
-|| ***Entity: {dish}***
-|| This intent is used when the user wants more details about a specific recipe. The entity ***{dish}*** captures the name of the dish for which the user wants details.
-
-#### **GetHealthyRecipes**
-
-|**Intent:**| **GetHealthyRecipes**|
-| ------ | ------ |
-| ***Utterances:***
-|| "Find me healthy recipes"
-|| "I want to cook something nutritious"
-|| "Healthy meal ideas"
-|| "Suggest me a low-calorie recipe"
-| ***Explanation:***|
-||***Entity: none***
-||This intent is used when the user specifically requests healthy or nutritious recipes. There are no specific entities or roles involved in this case.
-
-
 #### **GetRandomRecipe**
 
 |**Intent:**| **GetRandomRecipe**|
@@ -224,7 +196,8 @@ To create utterances and intents for a recipe search system using Wit.ai, you'll
 
 ## How to Define Search Queries in Spoonacular API
 
-We matched intents extracted by Wit and used API that match in Spoonacular API
+We matched intents extracted by Wit and used API that match in [Spoonacular API][recipe-api]
+
 
 |**Intent:**| **GetRecipe**|
 | ------ | ------ |
@@ -235,17 +208,6 @@ We matched intents extracted by Wit and used API that match in Spoonacular API
 | ------ | ------ |
 |Method  | GET
 | API| https://api.spoonacular.com/recipes/findByIngredients|
-
-|**Intent:**| **GetRecipeDetails**|
-| ------ | ------ |
-|Method  | GET
-| API| https://api.spoonacular.com/recipes/{id}/information|
-
-|**Intent:**| **GetHealthyRecipes**|
-| ------ | ------ |
-|Method  | GET
-| API| https://api.spoonacular.com/recipes/complexSearch|
-|Parameters|Hard-code healthy parameters for the request|
 
 |**Intent:**| **GetRandomRecipe**|
 | ------ | ------ |
@@ -274,4 +236,5 @@ This project is licensed under the MIT License. See the [LICENSE][MIT] file for 
 [state-flow]: <https://github.com/naturuplift/bootcamp-project-one/blob/main/assets/img/Voice%20Language%20Translation%20State%20Diagram%20v2.png>
 [wit-api]: <https://wit.ai/>
 [spoon-api]: <https://spoonacular.com/food-api/docs>
+[recipe-api]: <https://spoonacular.com/food-api/docs>
 [MIT]: <https://github.com/naturuplift/bootcamp-project-one/blob/main/LICENSE>
